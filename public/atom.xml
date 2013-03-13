@@ -4,7 +4,7 @@
   <title><![CDATA[Code Point Oh]]></title>
   <link href="http://codepointoh.com/atom.xml" rel="self"/>
   <link href="http://codepointoh.com/"/>
-  <updated>2013-02-13T22:33:57-05:00</updated>
+  <updated>2013-03-12T23:03:18-04:00</updated>
   <id>http://codepointoh.com/</id>
   <author>
     <name><![CDATA[Chris Stephan]]></name>
@@ -12,5 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hexidecimals, Binary, and other Radices]]></title>
+    <link href="http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/"/>
+    <updated>2013-02-13T16:49:00-05:00</updated>
+    <id>http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices</id>
+    <content type="html"><![CDATA[<p>  Would you believe that 0xDF9A2C, 110111111001101000101100 and 14653996 are all the same number? Two weeks ago I would have said &#8216;Sure, but why the heck should I even care?&#8217;. While they all do represent the same number, where they differ is their radix. This is more commonly referred to as number&#8217;s base.  When you see price tags, speed limits, and apartment numbers they are all in base 10. You may be wondering what exactly that implies. Base 10 means that we use ten unique characters to represent a number. Numbers we deal with on a daily basis are only made up of the characters 0 1 2 3 4 5 6 7 8 and 9.  Every number that you can count to is representable using this base 10 system. You may be wondering at this point if there are other radices (bases).  In fact there are. None of them are as commonplace as base 10 but they each definitely have their place. First lets take a look at binary, which is considered base 2.</p>
+
+<!-- more -->
+
+
+<h3>Binary</h3>
+
+<p>  Ever heard the saying &#8216;There are 10 types of people in the world: Those who understand binary, and those who don&#8217;t.&#8217; This funny saying specifically shows how quickly people assume the numbers they see are base 10 and not another base. Had they wrote 10<sub>2</sub>, some people might have caught on earlier that this wasn&#8217;t a regular number. Following the previous statement I made about representing a number in base 10, we can do exactly the same with base 2. But this time, we can only use two unique characters. These just so happen to be 0 and 1. It almost seems impossible.  How can you possibly represent a number like 1256 with only two characters? With a bit of math, I&#8217;ll do my best to explain this herculean task.</p>
+
+<p>  Lets start out with some simple math. I hope we can all agree that 2<sup>1</sup> = 2. And if you&#8217;re really mathematically inclined, you&#8217;ll already know that 2<sup>0</sup> = 1. If you didn&#8217;t already know that&#8217;s ok.  If we follow this pattern for a bit, we can actually build up a nice little chart with the following numbers:</p>
+
+<center>
+<style>
+    td, th {
+        border: 1px solid black;
+    }  
+</style>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 50px; text-align: center;"> &nbsp; &nbsp;2<sup>0</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>1</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>2</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>3</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>4</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>5</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>6</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>7</sup> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;"> 1 </td>
+            <td style="text-align: center;"> 2 </td>
+            <td style="text-align: center;"> 4 </td>
+            <td style="text-align: center;"> 8 </td>
+            <td style="text-align: center;"> 16 </td>
+            <td style="text-align: center;"> 32 </td>
+            <td style="text-align: center;"> 64 </td>
+            <td style="text-align: center;"> 128 </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+
+]]></content>
+  </entry>
   
 </feed>

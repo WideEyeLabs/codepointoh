@@ -1,19 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/</loc>
+        <lastmod>2013-03-12T23:03:18-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://codepointoh.com/blog/archives/</loc>
-        <lastmod>2013-02-13T21:24:41-05:00</lastmod>
+        <lastmod>2013-03-12T23:03:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://codepointoh.com/</loc>
-        <lastmod>2013-02-13T21:24:41-05:00</lastmod>
+        <lastmod>2013-03-12T23:03:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://codepointoh.com/robots.txt</loc>
-        <lastmod>2013-02-13T21:24:41-05:00</lastmod>
+        <lastmod>2013-03-12T22:49:42-04:00</lastmod>
     </url>
     <url>
         <loc>http://codepointoh.com/search.html</loc>
-        <lastmod>2013-02-13T21:24:41-05:00</lastmod>
+        <lastmod>2013-03-12T22:49:42-04:00</lastmod>
     </url>
 </urlset>

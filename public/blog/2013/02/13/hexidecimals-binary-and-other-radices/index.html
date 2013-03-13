@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Hexidecimals, Binary, and other Radices - Code Point Oh</title>
+  <meta name="author" content="Chris Stephan">
+
+  
+  <meta name="description" content="Would you believe that 0xDF9A2C, 110111111001101000101100 and 14653996 are all the same number? Two weeks ago I would have said &#8216;Sure, but why &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Code Point Oh" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Code Point Oh</a></h1>
+  
+    <h2>A collection of code related tutorials.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:codepointoh.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Hexidecimals, Binary, and Other Radices</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-13T16:49:00-05:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>  Would you believe that 0xDF9A2C, 110111111001101000101100 and 14653996 are all the same number? Two weeks ago I would have said &#8216;Sure, but why the heck should I even care?&#8217;. While they all do represent the same number, where they differ is their radix. This is more commonly referred to as number&#8217;s base.  When you see price tags, speed limits, and apartment numbers they are all in base 10. You may be wondering what exactly that implies. Base 10 means that we use ten unique characters to represent a number. Numbers we deal with on a daily basis are only made up of the characters 0 1 2 3 4 5 6 7 8 and 9.  Every number that you can count to is representable using this base 10 system. You may be wondering at this point if there are other radices (bases).  In fact there are. None of them are as commonplace as base 10 but they each definitely have their place. First lets take a look at binary, which is considered base 2.</p>
+
+<!-- more -->
+
+
+<h3>Binary</h3>
+
+<p>  Ever heard the saying &#8216;There are 10 types of people in the world: Those who understand binary, and those who don&#8217;t.&#8217; This funny saying specifically shows how quickly people assume the numbers they see are base 10 and not another base. Had they wrote 10<sub>2</sub>, some people might have caught on earlier that this wasn&#8217;t a regular number. Following the previous statement I made about representing a number in base 10, we can do exactly the same with base 2. But this time, we can only use two unique characters. These just so happen to be 0 and 1. It almost seems impossible.  How can you possibly represent a number like 1256 with only two characters? With a bit of math, I&#8217;ll do my best to explain this herculean task.</p>
+
+<p>  Lets start out with some simple math. I hope we can all agree that 2<sup>1</sup> = 2. And if you&#8217;re really mathematically inclined, you&#8217;ll already know that 2<sup>0</sup> = 1. If you didn&#8217;t already know that&#8217;s ok.  If we follow this pattern for a bit, we can actually build up a nice little chart with the following numbers:</p>
+
+<center>
+<style>
+    td, th {
+        border: 1px solid black;
+    }  
+</style>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 50px; text-align: center;"> &nbsp; &nbsp;2<sup>0</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>1</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>2</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>3</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>4</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>5</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>6</sup> </th>
+            <th style="width: 50px; text-align: center;"> &nbsp;&nbsp;2<sup>7</sup> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;"> 1 </td>
+            <td style="text-align: center;"> 2 </td>
+            <td style="text-align: center;"> 4 </td>
+            <td style="text-align: center;"> 8 </td>
+            <td style="text-align: center;"> 16 </td>
+            <td style="text-align: center;"> 32 </td>
+            <td style="text-align: center;"> 64 </td>
+            <td style="text-align: center;"> 128 </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chris Stephan</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-13T16:49:00-05:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/" data-via="endozemedia" data-counturl="http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/13/hexidecimals-binary-and-other-radices/">Hexidecimals, Binary, and other Radices</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/endozemedia">@endozemedia</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'endozemedia',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("endozemedia", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/endozemedia" class="twitter-follow-button" data-show-count="false">Follow @endozemedia</a>
+  
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chris Stephan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'codepointoh';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/';
+        var disqus_url = 'http://codepointoh.com/blog/2013/02/13/hexidecimals-binary-and-other-radices/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
